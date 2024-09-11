@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <script src="smooth-scroll.min.js"></script>
+
+
+    <style>
+
+        /* styles.css */
+        body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh; /* Asegura que el contenido ocupe la altura completa */
+}
+
+.sidebar {
+  width: 200px; /* Ajusta el ancho de la barra lateral según sea necesario */
+  position: fixed;
+  right: 0; /* Fija la barra lateral al lado derecho */
+  top: 0;
+  bottom: 0;
+  background-color: #f4f4f4; /* Color de fondo de la barra lateral */
+  padding: 20px;
+  overflow-y: auto; /* Añade desplazamiento si el contenido es más largo que la pantalla */
+}
+
+.container {
+  flex: 1; /* Hace que el contenedor ocupe el resto del espacio disponible */
+  margin-right: 200px; /* Ajusta para que no se superponga con la barra lateral */
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px; /* Ancho máximo del contenido */
+  margin: auto;
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar li:hover {
+    background-color: #ddd;
+}
+
+
+.background {
+    background-color: rgba(165, 165, 165, 0.185);
+}
+.color {
+    color: rgba(255, 0, 0, 0.822);
+}
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <ul id="title-list">
+         
+        </ul>
+    </div>
+    <div class="container">
+        <!-- Lista de títulos a la izquierda -->
+       
+        <!-- Contenido renderizado a la derecha -->
+        <div class="content">
+            <div id="markdown-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+   
+
+</body>
+
+</html>
